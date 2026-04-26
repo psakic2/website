@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;     /* clip = no horizontal scroll, keeps position:sticky working on iOS Safari */
 }
 
 img { max-width: 100%; display: block; height: auto; }
@@ -837,7 +837,7 @@ a:hover { color: var(--gold-bright); }
   .nav-toggle { display: block; }
   .nav-links {
     position: fixed;
-    top: 60px; left: 0; right: 0;
+    top: 76px; left: 0; right: 0;
     flex-direction: column;
     gap: 0;
     background: rgba(13, 9, 5, 0.97);
@@ -845,9 +845,16 @@ a:hover { color: var(--gold-bright); }
     border-bottom: 1px solid var(--gold-faint);
     padding: 1rem 0;
     transform: translateY(-120%);
-    transition: transform 0.3s ease;
+    visibility: hidden;            /* belt + braces — keep drawer hidden even if transform glitches */
+    pointer-events: none;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
   }
-  .nav-links.open { transform: translateY(0); }
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.3s ease, visibility 0s linear 0s;
+  }
   .nav-links a {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid rgba(201, 168, 112, 0.08);
