@@ -8,12 +8,12 @@
   --bg-card:      #1a1208;
   --gold:         #c9a870;
   --gold-bright:  #e8c98a;
-  --gold-dim:     rgba(201, 168, 112, 0.45);
-  --gold-faint:   rgba(201, 168, 112, 0.18);
-  --gold-bg:      rgba(201, 168, 112, 0.055);
+  --gold-dim:     rgba(201, 168, 112, 0.62);
+  --gold-faint:   rgba(201, 168, 112, 0.28);
+  --gold-bg:      rgba(201, 168, 112, 0.07);
   --text:         #f5eed8;
-  --text-dim:     rgba(245, 238, 216, 0.68);
-  --text-faint:   rgba(245, 238, 216, 0.4);
+  --text-dim:     rgba(245, 238, 216, 0.82);
+  --text-faint:   rgba(245, 238, 216, 0.55);
   --blue-accent:  #7ecce8;
 }
 
@@ -71,7 +71,7 @@ a:hover { color: var(--gold-bright); }
   margin-top: 0.4rem;
 }
 .body-text {
-  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
   color: var(--text-dim);
   line-height: 1.7;
 }
@@ -267,12 +267,12 @@ a:hover { color: var(--gold-bright); }
 }
 .card-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   color: var(--gold);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
 }
-.card-body { color: var(--text-dim); font-size: 0.93rem; line-height: 1.6; }
+.card-body { color: var(--text-dim); font-size: 1rem; line-height: 1.65; }
 
 /* ─── Grids ─── */
 .grid { display: grid; gap: 1.2rem; }
@@ -367,12 +367,12 @@ a:hover { color: var(--gold-bright); }
 }
 .item-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   color: var(--gold);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
   font-weight: 600;
 }
-.item-desc { color: var(--text-dim); font-size: 0.92rem; line-height: 1.6; }
+.item-desc { color: var(--text-dim); font-size: 1rem; line-height: 1.65; }
 
 /* ─── Rule rows (house rules / info) ─── */
 .rule-list { display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; }
@@ -384,7 +384,7 @@ a:hover { color: var(--gold-bright); }
   align-items: flex-start;
 }
 .rule-icon { font-size: 1rem; min-width: 2.4rem; text-align: center; flex-shrink: 0; color: var(--gold); padding-top: 2px; }
-.rule-text { color: var(--text-dim); font-size: 0.97rem; line-height: 1.6; }
+.rule-text { color: var(--text-dim); font-size: 1.04rem; line-height: 1.65; }
 .rule-text strong { color: var(--gold); font-weight: 500; }
 
 /* ─── Hero entrance (home page) ─── */
