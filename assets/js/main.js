@@ -39,6 +39,7 @@
   if (subnav) {
     const subLinks = subnav.querySelectorAll('a[href^="#"]');
     const targets  = Array.from(subLinks).map(l => document.getElementById(l.getAttribute('href').slice(1))).filter(Boolean);
+    let prevActiveId = null;
     const onSpy = () => {
       const threshold = 160;  // px from top of viewport
       let activeId = targets[0] && targets[0].id;
@@ -47,6 +48,18 @@
         if (top <= threshold) activeId = t.id;
       });
       subLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + activeId));
+
+      // When the active section changes, auto-scroll the sub-nav horizontally
+      // to keep the active link visible (mobile fix — bar may be wider than viewport).
+      if (activeId !== prevActiveId) {
+        prevActiveId = activeId;
+        const activeLink = subnav.querySelector('a.active');
+        if (activeLink) {
+          const linkCenter = activeLink.offsetLeft + (activeLink.offsetWidth / 2);
+          const targetLeft = linkCenter - (subnav.clientWidth / 2);
+          subnav.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        }
+      }
     };
     window.addEventListener('scroll', onSpy, { passive: true });
     onSpy();
