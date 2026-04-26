@@ -6,14 +6,14 @@
   --bg:           #0d0905;
   --bg-soft:      #14100a;
   --bg-card:      #1a1208;
-  --gold:         #c9a870;
-  --gold-bright:  #e8c98a;
-  --gold-dim:     rgba(201, 168, 112, 0.62);
-  --gold-faint:   rgba(201, 168, 112, 0.28);
-  --gold-bg:      rgba(201, 168, 112, 0.07);
-  --text:         #f5eed8;
-  --text-dim:     rgba(245, 238, 216, 0.82);
-  --text-faint:   rgba(245, 238, 216, 0.55);
+  --gold:         #d6b478;          /* brighter gold for stronger contrast */
+  --gold-bright:  #efd498;
+  --gold-dim:     rgba(214, 180, 120, 0.78);
+  --gold-faint:   rgba(214, 180, 120, 0.32);
+  --gold-bg:      rgba(214, 180, 120, 0.08);
+  --text:         #faf3dc;
+  --text-dim:     rgba(250, 243, 220, 0.92);
+  --text-faint:   rgba(250, 243, 220, 0.6);
   --blue-accent:  #7ecce8;
 }
 
@@ -64,11 +64,11 @@ a:hover { color: var(--gold-bright); }
 .section-sub {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
-  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
-  letter-spacing: 0.3em;
+  font-size: clamp(0.96rem, 1.7vw, 1.18rem);
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold-dim);
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 .body-text {
   font-size: clamp(1rem, 1.2vw, 1.12rem);
@@ -76,7 +76,7 @@ a:hover { color: var(--gold-bright); }
   line-height: 1.7;
 }
 .gold-em { color: var(--gold); font-weight: 500; }
-.italic { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; }
+.italic { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.08em; }
 
 /* ─── Divider ─── */
 .divider {
@@ -257,9 +257,11 @@ a:hover { color: var(--gold-bright); }
   background: var(--gold-bg);
   border: 1px solid var(--gold-faint);
   border-radius: 6px;
-  padding: 1.4rem 1.5rem;
+  padding: 1.6rem 1.6rem;
   transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  text-align: center;
 }
+.card .card-body { text-align: left; }
 .card:hover {
   border-color: var(--gold-dim);
   background: rgba(201, 168, 112, 0.08);
@@ -856,9 +858,10 @@ a:hover { color: var(--gold-bright); }
     transition: transform 0.3s ease, visibility 0s linear 0s;
   }
   .nav-links a {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(201, 168, 112, 0.08);
-    font-size: 0.85rem;
+    padding: 1.3rem 1.5rem;
+    border-bottom: 1px solid rgba(214, 180, 120, 0.12);
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
   }
   .nav-links a.active::after { display: none; }
 
