@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Split — Oblivion Luxury Rooms</title>
+<meta name="description" content="A guide to Split — Diocletian's Palace, beaches, Dalmatian cuisine, restaurants, islands and adventures around the city.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body style="padding-top: 76px;">
+
+<!-- ─────────── NAVIGATION ─────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Oblivion<small>Luxury Rooms</small></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">The Rooms</a></li>
+      <li><a href="split.html">Discover Split</a></li>
+      <li><a href="getting-here.html">Getting Here</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─────────── STICKY SUB-NAV ─────────── -->
+<div class="subnav">
+  <div class="subnav-inner">
+    <a href="#palace">The Palace</a>
+    <a href="#essentials">Essentials</a>
+    <a href="#beaches">Beaches</a>
+    <a href="#food">Food &amp; Drinks</a>
+    <a href="#nightlife">Nightlife</a>
+    <a href="#islands">Islands</a>
+    <a href="#adventures">Adventures</a>
+    <a href="#local-tips">Local Tips</a>
+  </div>
+</div>
+
+<!-- ═══════════════ THE PALACE ═══════════════ -->
+<section class="section" id="palace" data-spy>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">A.D. 305</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Diocletian's Palace</h2>
+      <p class="section-sub">Built 295–305 · UNESCO World Heritage Site</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="max-width: 980px; margin: 0 auto;">
+      <img src="assets/images/split/diocletians-palace.jpg" alt="Diocletian's Palace" style="width: 100%; border-radius: 6px; border: 1px solid var(--gold-faint);">
+    </div>
+
+    <!-- History -->
+    <div style="max-width: 760px; margin: 2.4rem auto 0;">
+      <p class="body-text">
+        Built between <span class="gold-em">A.D. 295 and 305</span> as a fortified retirement residence for
+        Roman Emperor Diocletian, the Palace covers nearly 30,000 square metres at the eastern edge of the old
+        town — half the Emperor's private quarters, half a Roman military garrison. It is one of the most
+        complete Roman structures surviving anywhere in the world.
+      </p>
+      <p class="body-text" style="margin-top: 1rem;">
+        After the fall of the Empire, refugees fleeing the destruction of the nearby Roman city of <em class="italic">Salona</em>
+        moved inside the Palace's protective walls. They never left. Their descendants <span class="gold-em">live there still,
+        seventeen centuries later</span> — making this perhaps the only ancient Roman monument on Earth that has
+        been continuously inhabited from the day it was built. Inscribed by UNESCO as a World Heritage Site in 1979.
+      </p>
+      <p class="body-text text-center" style="margin-top: 1.6rem;">
+        <a href="https://visitsplit.com/en/15/diocletian-s-palace" target="_blank" rel="noopener" style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.85rem;">
+          Read more on visitsplit.com &nbsp;→
+        </a>
+      </p>
+    </div>
+
+    <p class="italic text-center" style="font-size: clamp(1.05rem, 1.9vw, 1.35rem); color: var(--text-dim); max-width: 720px; margin: 3rem auto 0; line-height: 1.7;">
+      "A city within a city — where 1,700 years of history live and breathe beneath your feet."
+    </p>
+
+    <!-- Fascinating Facts -->
+    <div class="text-center" style="margin: 3.5rem 0 1.6rem;">
+      <span class="eyebrow">Fascinating Facts</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem; font-size: clamp(1.5rem, 3vw, 2.4rem);">Secrets of the Palace</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> The Living Palace</div>
+        <div class="card-body">This is not a museum — it's a living neighbourhood. <span class="gold-em">Three thousand people live inside 1,700-year-old walls</span>. Their laundry hangs between Roman columns; neighbours argue across ancient archways.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> The Cabbage Emperor</div>
+        <div class="card-body">Diocletian was the <span class="gold-em">only Roman Emperor to voluntarily abdicate</span>. He retired here in 305 A.D. to grow cabbages. When begged to return to power, he reportedly replied: <em class="italic">"If you could see my cabbages, you would not ask."</em></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Game of Thrones</div>
+        <div class="card-body">Klis Fortress was <span class="gold-em">Meereen</span>. Diocletian's cellars appeared as the <span class="gold-em">dragon pits</span>. Walk the exact paths of Daenerys Targaryen — a GoT walking tour is genuinely brilliant.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> The Zinfandel Secret</div>
+        <div class="card-body">DNA testing confirmed <span class="gold-em">Zinfandel and Primitivo grapes originated in Croatia</span> — from the Dalmatian Crljenak Kaštelanski variety. California wine culture owes a great deal to this coast.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Picigin — Pure Split Soul</div>
+        <div class="card-body">The ball game played at Bačvice is <span class="gold-em">unique to Split</span> and inscribed on UNESCO's heritage list. Players stand in ankle-deep water performing acrobatics to keep a small ball from touching the surface.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Three Layers of History</div>
+        <div class="card-body">The Cathedral bell tower was built <span class="gold-em">900 years</span> after the Cathedral itself, which was built <span class="gold-em">900 years</span> after the Palace. Three civilisations stacked on one spot — 1,800 years of continuous human story.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ESSENTIALS ═══════════════ -->
+<section class="section" id="essentials" data-spy style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">Must See</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Split Essentials</h2>
+      <p class="section-sub">The unmissable experiences of an extraordinary city</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="item-list" style="max-width: 920px; margin: 0 auto;">
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Diocletian's Palace — You're Already Inside It</div>
+          <div class="item-desc">A UNESCO World Heritage marvel where 3,000 people still live. Explore the Peristyle square, underground cellars, Jupiter's Temple and the Golden Gate. Don't just visit — <em class="italic">wander, get lost, discover</em>.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Peristyle Square — The Heart of the Palace</div>
+          <div class="item-desc">The grand colonnaded courtyard at the centre of the Palace, where Diocletian once received guests at his throne. Today it hosts summer opera, candle-lit cafés and street musicians. The most photographed square in Split.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Cathedral of Saint Domnius — Climb the Bell Tower</div>
+          <div class="item-desc">Built inside Diocletian's own mausoleum — one of the world's oldest functioning cathedrals. The bell tower offers the most spectacular 360° panorama of the city and sea. 206 steps. Worth every single one.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">The Riva — Split's Grand Promenade</div>
+          <div class="item-desc">The white-stone seafront walk along the Palace's southern wall. Palms, cafés, and the Adriatic on one side; 1,700-year-old walls on the other. Locals gather here every evening — sunset on the Riva is essentially the city's heartbeat.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Pazar &amp; Peškarija — The Markets</div>
+          <div class="item-desc">Split's daily green market (Pazar) and old fish market (Peškarija) are the still-beating heart of the city's food culture. Fresh produce, fish caught that morning, and real Split life unfolding exactly as it has for centuries. Best before 11 AM.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Statue of Gregory of Nin (Grgur Ninski)</div>
+          <div class="item-desc">A 9th-century Croatian bishop immortalised in bronze by Ivan Meštrović just outside the Golden Gate. Tradition says rubbing his enormous big toe brings <span class="gold-em">good luck</span> and a return to Split. The toe gleams from a century of faithful believers.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Meštrović Gallery — Art, Architecture &amp; Sea Views</div>
+          <div class="item-desc">Croatia's greatest sculptor built this stunning Italianate villa as his summer residence. Breathtaking sea views, terraced gardens filled with bronze masterpieces. One of the most beautiful art spaces in the Adriatic.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Marjan Hill — The Green Soul of Split</div>
+          <div class="item-desc">A forested peninsula above the city with pine-shaded walking and cycling paths, hidden medieval chapels, a small deer park and the finest sunset panoramas of Split and the islands.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Klis Fortress — Game of Thrones' Meereen · 20 min from Split</div>
+          <div class="item-desc">A spectacular medieval fortress clinging to a cliff high above the city, filmed as Meereen in Game of Thrones. Jaw-dropping views across Split to the Adriatic. An essential half-day trip with a powerful story behind every stone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BEACHES ═══════════════ -->
+<section class="section" id="beaches" data-spy>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">Crystal Adriatic</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Beaches</h2>
+      <p class="section-sub">From a 5-minute walk to bucket-list day trips</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="max-width: 920px; margin: 0 auto;">
+      <h3 class="section-sub text-center" style="font-size: 1rem; color: var(--gold); margin-bottom: 0.4rem;">In Split</h3>
+      <div class="item-list">
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Bačvice Beach — The Icon · 5 min walk from the Palace</div>
+            <div class="item-desc">Split's most famous beach and the spiritual home of <em class="italic">picigin</em>, the legendary local ball game on the UNESCO heritage list. Shallow, warm, sandy — buzzing beach bars at sunset. Split beach culture at its finest.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Kašjuni Beach — Hidden Gem · Beneath Marjan Hill</div>
+            <div class="item-desc">Tucked beneath Marjan's pine forests — no beach bars, no crowds. Just crystal-clear turquoise water over smooth pebbles, and absolute tranquility. A local escape, perfect for peaceful morning swims.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Žnjan Beach — Family Favourite · Eastern Split</div>
+            <div class="item-desc">Split's longest beach with a relaxed, local atmosphere. Excellent facilities, consistently clean water and a beautiful waterfront promenade alongside. Ideal for spending a full, lazy day.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Ježinac Beach — Intimate &amp; Sheltered · Central Split</div>
+            <div class="item-desc">A small, protected pebble beach with exceptionally clear water, ideal for snorkelling. Quieter than Bačvice and beautifully positioned in the heart of the city — a polished little gem.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-sub text-center" style="font-size: 1rem; color: var(--gold); margin-top: 3rem; margin-bottom: 0.4rem;">Around Split — Ferry or a Short Drive</h3>
+      <div class="item-list">
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Zlatni Rat (Golden Horn) — Bol, Brač Island · 1h ferry + 20 min bus</div>
+            <div class="item-desc">Croatia's most photographed beach — a unique white pebble spit that <em class="italic">shifts direction with the wind</em> and juts dramatically into turquoise sea. Spectacular, unforgettable. Bucket-list material.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Stiniva Cove — Vis Island · Voted Best Beach in Europe</div>
+            <div class="item-desc">A secret pebble cove hidden between dramatic 100m cliffs, accessible only by boat or a steep hike. Wild, intimate, breathtaking — one of the most extraordinary beaches in Europe.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Pakleni Islands — Near Hvar · ~2h</div>
+            <div class="item-desc">An archipelago of 20 pine-forested islands near Hvar. Crystal bays, beach bars, some of Croatia's clearest water. Reach them by water taxi from Hvar harbour.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Brela — Makarska Riviera · 1h drive</div>
+            <div class="item-desc">6 kilometres of pristine pebble beach backed by the dramatic Biokovo mountains. Famous for the iconic <em class="italic">Brela Stone</em> rising from the sea. An easy half-day trip and one of Europe's most beautiful beaches.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Blue Lagoon — Boat Tour from Split · Half or Full Day</div>
+            <div class="item-desc">A shallow, almost unreal-blue bay between three small islands, reachable only by boat. The classic <span class="gold-em">Blue Lagoon tour</span> from Split spends a few hours here for swimming and snorkelling. One of the most popular full-day boat trips from the city.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Laganini Beach Bar — Čiovo Island · ~30 min drive</div>
+            <div class="item-desc">On <span class="gold-em">Čiovo</span> — the closest island to Split, connected by bridge — Laganini is a beautifully designed beach bar with crystal water, sun loungers and a lazy Mediterranean feel. The easiest island escape from Split.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-icon">✦</div>
+          <div>
+            <div class="item-title">Primošten Area — A Coast of Hidden Beaches · ~40 min drive</div>
+            <div class="item-desc">A small medieval town on its own peninsula, surrounded by some of the loveliest <span class="gold-em">pebble beaches</span> on this stretch of coast. Multiple beaches stretch in both directions — quiet, clean, with a dramatic Dalmatian backdrop.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden coves note -->
+      <div class="text-center" style="margin-top: 3rem; padding: 2rem 1.5rem; border: 1px solid var(--gold-faint); border-radius: 6px; background: var(--gold-bg);">
+        <span class="eyebrow" style="font-size: 0.78rem;">The Real Magic</span>
+        <p class="body-text italic" style="margin-top: 1rem; max-width: 720px; margin-left: auto; margin-right: auto; font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.7;">
+          Beyond these named beaches, the Dalmatian coast hides <span class="gold-em" style="font-style: normal;">hundreds of small coves and secret swimming spots</span>. Drive south toward Omiš and Makarska, north along the road to Trogir, or down any unmarked path through the pines — and you'll find your own private beach. The more you wander, the more this coast gives you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOD ═══════════════ -->
+<section class="section" id="food" data-spy style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">Dalmatian Cuisine</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">The Soul of the Adriatic on Your Plate</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Cuisine intro -->
+    <div style="max-width: 880px; margin: 0 auto;">
+      <div class="grid grid-2" style="gap: 2rem;">
+        <div>
+          <h3 class="card-title"><span style="color: var(--gold);">✦</span> Mediterranean at Heart</h3>
+          <p class="body-text">Dalmatian cooking celebrates <span class="gold-em">simplicity and supreme quality</span>. Ultra-fresh Adriatic seafood, cold-pressed olive oil, sun-ripened vegetables, wild herbs and local wine — the building blocks of every great meal here.</p>
+          <h3 class="card-title" style="margin-top: 1.4rem;"><span style="color: var(--gold);">✦</span> The Holy Trinity</h3>
+          <p class="body-text"><span class="gold-em">Olive oil, garlic and sea salt</span> appear in nearly every dish. Locals say the Adriatic salt air itself seasons the food before it reaches the kitchen.</p>
+          <h3 class="card-title" style="margin-top: 1.4rem;"><span style="color: var(--gold);">✦</span> Wine Culture</h3>
+          <p class="body-text">The Dalmatian hinterland produces world-class wine. <span class="gold-em">Plavac Mali</span> (a powerful red, cousin of Zinfandel) and crisp white <span class="gold-em">Pošip</span> are local gems. Ask for <em class="italic">"domaće vino."</em></p>
+        </div>
+        <div>
+          <h3 class="card-title"><span style="color: var(--gold);">✦</span> The Art of Slow Cooking</h3>
+          <p class="body-text">The most beloved dishes take <span class="gold-em">time and patience</span>. Peka — meat or seafood slow-cooked under a cast-iron bell — can take 3 hours. Not fast food. A philosophy of life.</p>
+          <h3 class="card-title" style="margin-top: 1.4rem;"><span style="color: var(--gold);">✦</span> Fresh from the Sea</h3>
+          <p class="body-text">Dalmatian fishermen have supplied Split's markets for centuries. <span class="gold-em">Sea bream, sea bass, John Dory, dentex</span> and octopus are daily staples. If it's on the menu, it was almost certainly caught that morning.</p>
+          <h3 class="card-title" style="margin-top: 1.4rem;"><span style="color: var(--gold);">✦</span> Local Tip</h3>
+          <p class="body-text">Walk <span class="gold-em">two streets away</span> from any main tourist promenade. Prices drop, quality rises, and the restaurants are full of locals — always the best sign.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Must-Try Dishes -->
+    <div class="text-center" style="margin: 4rem 0 1.6rem;">
+      <span class="eyebrow">Must-Try</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Dalmatian Dishes</h2>
+      <p class="section-sub">Your Croatian food bucket list</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="grid grid-4">
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/peka" target="_blank" rel="noopener"><img src="assets/images/food/peka.jpg" alt="Peka" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Peka</div>
+          <p>Lamb or octopus slow-cooked for 2–3 hours under a cast-iron bell covered in hot embers. <em class="italic">The</em> defining Dalmatian experience. <span class="gold-em">Order in advance</span>.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/brudet" target="_blank" rel="noopener"><img src="assets/images/food/brudet.jpg" alt="Brudet" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Brudet (Brodet)</div>
+          <p>A rich fisherman's stew of mixed Adriatic fish, onions, tomatoes and wine, simmered low and slow. Served with creamy polenta. Every grandmother has a secret recipe.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/crni-rizot" target="_blank" rel="noopener"><img src="assets/images/food/crni-rizot.jpg" alt="Crni Rižot" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Crni Rižot</div>
+          <p>Risotto made dramatically black with cuttlefish or squid ink. Intensely briny, deeply flavoured. A Dalmatian icon that <span class="gold-em">divides tourists and unites locals</span>.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/dalmatinska-pasticada" target="_blank" rel="noopener"><img src="assets/images/food/pasticada.webp" alt="Pašticada" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Pašticada</div>
+          <p>Slow-braised beef marinated overnight in vinegar, prunes and spices, cooked in a silky sweet-savoury sauce with Prošek wine. Served with <span class="gold-em">homemade gnocchi</span>. Sunday-lunch perfection.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/best-rated-fish-dishes-in-dalmatia" target="_blank" rel="noopener"><img src="assets/images/food/grilled-fish.jpg" alt="Grilled Fish" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Riba na Žaru</div>
+          <p>Fresh Adriatic fish (sea bream, sea bass, dentex) simply grilled with olive oil, garlic and herbs. Served with blitva and boiled potatoes. <span class="gold-em">Perfection in simplicity</span>.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/fritule" target="_blank" rel="noopener"><img src="assets/images/food/fritule.webp" alt="Fritule" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Fritule</div>
+          <p>Small fried dough balls with rum, citrus zest and raisins — Croatia's answer to doughnuts. Traditionally Christmas food, but found year-round. <span class="gold-em">Utterly addictive</span>.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/poljicki-soparnik" target="_blank" rel="noopener"><img src="assets/images/food/soparnik.jpg" alt="Soparnik" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Soparnik</div>
+          <p>A <span class="gold-em">UNESCO-protected</span> savoury pie from the Omiš region, filled with Swiss chard, onions and olive oil. Simple, ancient, extraordinary — a true taste of old Dalmatia.</p>
+        </div>
+      </div>
+      <div class="dish-card">
+        <a class="dish-photo" href="https://www.tasteatlas.com/burek" target="_blank" rel="noopener"><img src="assets/images/food/burek.jpg" alt="Burek" loading="lazy"></a>
+        <div class="dish-body">
+          <div class="dish-title">Burek</div>
+          <p>Flaky phyllo pastry filled with cheese (sir) or minced meat. The Dalmatian breakfast of champions. Best eaten <span class="gold-em">piping hot from the bakery</span> at 7 AM.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="text-center" style="margin: 4rem 0 1.6rem;">
+      <span class="eyebrow">What to Drink</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Dalmatian Drinks</h2>
+      <p class="section-sub">Wines, brandies and the daily coffee ritual</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Plavac Mali</div>
+        <div class="card-body">Dalmatia's signature red — <span class="gold-em">powerful, sun-soaked</span>, the genetic cousin of California's Zinfandel. The benchmark Dalmatian wine. Order it everywhere.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Pošip</div>
+        <div class="card-body">A crisp, mineral-driven white from <span class="gold-em">Korčula and Pelješac</span>. Pairs effortlessly with seafood. The summer white of choice.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Dingač &amp; Postup</div>
+        <div class="card-body">Premium reds from the steep, sun-baked southern slopes of <span class="gold-em">Pelješac peninsula</span> — Croatia's most prestigious wines. Dense, velvety, age-worthy.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Prošek</div>
+        <div class="card-body">Traditional Dalmatian <span class="gold-em">sweet wine</span> made from sun-dried grapes. Sipped slowly with dessert or strong cheese. Not to be confused with Italian Prosecco.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Travarica</div>
+        <div class="card-body">Grape brandy infused with wild Dalmatian herbs — <span class="gold-em">sage, rosemary, juniper</span>. Often offered as a welcome shot at restaurants. Smoother than it sounds.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Rakija</div>
+        <div class="card-body">Croatia's wider family of fruit brandies — <em class="italic">šljivovica</em> (plum), <em class="italic">loza</em> (grape), <em class="italic">medica</em> (honey), <em class="italic">orahovica</em> (walnut). <span class="gold-em">Strong, traditional, deeply local.</span></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Maraschino</div>
+        <div class="card-body">A clear, fragrant <span class="gold-em">cherry liqueur</span> invented in nearby Zadar in the 18th century. Hemingway loved it. Sipped neat or in cocktails.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Karlovačko &amp; Ožujsko</div>
+        <div class="card-body">Croatia's two big lagers — every konoba and beach bar pours one or the other. <span class="gold-em">Cold, easy, perfectly fine</span> after a long beach day.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> The Coffee Ritual</div>
+        <div class="card-body">Croatians don't drink coffee — they <em class="italic">do špica</em>: long, slow morning sessions on the Riva. Order an espresso, sit, watch the city pass by. <span class="gold-em">There is no rush.</span></div>
+      </div>
+    </div>
+
+    <!-- TasteAtlas Split CTA -->
+    <div style="max-width: 880px; margin: 3rem auto 0; padding: 2.2rem 2rem; border: 1px solid var(--gold); border-radius: 8px; background: rgba(201, 168, 112, 0.07); text-align: center; box-shadow: 0 0 36px rgba(201, 168, 112, 0.05);">
+      <span class="eyebrow">Explore Further</span>
+      <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--gold); margin-top: 0.7rem; font-size: clamp(1.3rem, 2.6vw, 1.9rem); letter-spacing: 0.03em;">Split's Full Culinary Map</h3>
+      <div class="divider"></div>
+      <p class="body-text" style="margin-top: 1.2rem; max-width: 580px; margin-left: auto; margin-right: auto;">
+        Want to go deeper? <span class="gold-em">TasteAtlas's dedicated Split page</span> covers every traditional dish, drink and ingredient rooted in this city — beautifully illustrated and ranked by locals and travellers.
+      </p>
+      <div style="margin-top: 1.6rem;">
+        <a href="https://www.tasteatlas.com/split" target="_blank" rel="noopener" class="btn">Open TasteAtlas · Split</a>
+      </div>
+    </div>
+
+    <!-- Restaurants -->
+    <div class="text-center" style="margin: 4rem 0 1.6rem;">
+      <span class="eyebrow">Where to Eat</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Best Restaurants</h2>
+      <p class="section-sub">From Michelin-level dining to corner-konoba locals</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="item-list" style="max-width: 920px; margin: 0 auto;">
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">ZOI — Michelin Star · 2 min walk</div>
+          <div class="item-desc">Split's most prestigious dining room — a <span class="gold-em">Michelin-starred</span> kitchen on a wonderful location, very classy and pricy. The benchmark for fine dining in the city. Book well in advance.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Zrno Soli — Fine Dining · Michelin Recommended · 20 min walk</div>
+          <div class="item-desc">Creative modern Dalmatian cuisine with a <span class="gold-em">stunning terrace view</span> over the Adriatic. A bit further from the centre, but worth the walk. Ideal for a special occasion.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Sug — Modern Dalmatian · Refined &amp; Inventive</div>
+          <div class="item-desc">Contemporary takes on Dalmatian classics, beautifully plated. A more polished, modern dining room than the traditional konobas — warm, considered, perfect for a quiet evening.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Sperun — Traditional Dalmatian · Inside the Palace Walls</div>
+          <div class="item-desc">Authentic Dalmatian classics — excellent peka, pašticada, local wines — in a beautiful stone dining room. A true Split institution. Warm and unpretentious.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Bokeria — Trendy Mediterranean · 2 min walk</div>
+          <div class="item-desc">Lively, stylish atmosphere with creative Mediterranean dishes and an excellent wine list. <span class="gold-em">Great central location</span>, no view but plenty of buzz. Long evenings and excellent cocktails.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Antique Sushi — Sushi on the Riva · 3 min walk</div>
+          <div class="item-desc">Beautifully positioned right on the Riva promenade — <span class="gold-em">great location, great view</span>. Polished sushi and Japanese-Mediterranean dishes. A welcome change of pace from Dalmatian classics.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Pizzeria Bokamora — Best Pizza in Split · By the Sea</div>
+          <div class="item-desc">Petar's personal pick for the <span class="gold-em">best pizza in the city</span>. Beautiful seaside setting, generous Italian-Mediterranean kitchen, and pizza that locals quietly recommend to everyone.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Makaroom — Modern Pasta · Old Town</div>
+          <div class="item-desc">A stylish, intimate spot inside the Palace serving creative fresh pasta with Dalmatian ingredients. Beautiful presentation, excellent wine pairings. Reservation recommended.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Chops Grill — Steakhouse · Premium Cuts</div>
+          <div class="item-desc">For when you want a great steak in Split. Quality cuts, professional service, a polished modern dining room. The closest thing Split has to a classic American steakhouse.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Terasa Vidilica — Spectacular View · 15 min walk</div>
+          <div class="item-desc">A <span class="gold-em">brilliant panorama</span> over the entire town and harbour — easily one of the best views in Split. Food is solid rather than spectacular; come here for the sunset and a long, lazy drink.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Konoba Matejuška — Seafood · Old Fish Market</div>
+          <div class="item-desc">Family-run for generations, right at the historic fish market. Order whatever was caught that morning. No fuss — just exceptional seafood. Beloved by locals for decades.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Konoba Fetivi — Where the Locals Eat · Budget-Friendly</div>
+          <div class="item-desc">Zero tourist markup, real Dalmatian food, genuine hospitality. If you want to eat the way locals eat, come here. Exceptional value — the real Split on a plate.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Buffet Fife — Old Split · Generations of Locals</div>
+          <div class="item-desc">A no-fuss neighbourhood buffet near the Riva, serving the kind of simple Dalmatian food that locals grew up on. Generous portions, low prices, no concessions to tourists. The real Split.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NIGHTLIFE ═══════════════ -->
+<section class="section" id="nightlife" data-spy>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">After Dark</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Split Nightlife</h2>
+      <p class="section-sub">Bars, beach clubs and late-night spots worth knowing</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Interactive nightlife map -->
+    <div id="nightlife-map" class="leaflet-map" style="margin-bottom: 0;"></div>
+    <div class="pm-legend">
+      <span><span class="swatch gold"></span>Oblivion</span>
+      <span><span class="swatch parking"></span>Bars &amp; Clubs</span>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 2rem;">
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> 305</div>
+        <div class="card-body">A small, lively club just off <span class="gold-em">Marmontova street</span> in the city centre — international music, intimate dance floor, late nights without the megaclub crowds.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Boiler</div>
+        <div class="card-body">A <span class="gold-em">classier and pricier</span> downtown club — polished crowd, premium drinks, dressed-up nights out.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Central</div>
+        <div class="card-body">One of Split's <span class="gold-em">biggest clubs</span>, downtown — close to Boiler and 305, easy to bar-hop between them.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Vanilla</div>
+        <div class="card-body">One of Split's most famous clubs near <span class="gold-em">Poljud Stadium</span>. Indoor and open-air sections, busy summer nights, electronic music, big crowd energy.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Tennis Bar</div>
+        <div class="card-body">A relaxed <span class="gold-em">pre-party spot</span> working day and evening — easy drinks, casual crowd, the place locals go before heading downtown.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Antique</div>
+        <div class="card-body">On the <span class="gold-em">Riva promenade</span> in the heart of downtown — works equally well for a long lunch, sunset drinks or a late evening.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Tabu</div>
+        <div class="card-body">A <span class="gold-em">beach bar at Žnjan beach</span> — one of several similar venues along the promenade. Easy days on the loungers, easier evenings as the sun drops.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Gal</div>
+        <div class="card-body">Food and drinks on the <span class="gold-em">newly renovated Žnjan beachfront</span> — modern setting, full menu, cocktails right by the sea.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Fabrique</div>
+        <div class="card-body"><span class="gold-em">Industrial-style space</span> with cool music, food and drinks — works equally well as a daytime hangout or for cooler evenings.</div>
+      </div>
+    </div>
+
+    <p class="body-text text-center italic" style="max-width: 620px; margin: 2.4rem auto 0; color: var(--gold-dim);">
+      Most downtown clubs come alive after midnight in summer. Dress smart-casual — no flip-flops or beach attire.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ ISLANDS ═══════════════ -->
+<section class="section" id="islands" data-spy>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">Day Trips by Sea</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Islands &amp; the South</h2>
+      <p class="section-sub">The Adriatic archipelago is your playground</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="item-list" style="max-width: 920px; margin: 0 auto;">
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Hvar — Croatia's Glamour Island · 1h catamaran</div>
+          <div class="item-desc">Croatia's sunniest island — 2,724 sunshine hours per year. A breathtaking Renaissance main square, lavender fields, a Venetian hilltop fortress, dreamy beach clubs and legendary nightlife. Endlessly seductive.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Brač — Beach &amp; Stone · 1h ferry</div>
+          <div class="item-desc">Home to Zlatni Rat, Croatia's iconic beach. Also the source of the lustrous white limestone used for Diocletian's Palace — and famously the <em class="italic">White House in Washington D.C.</em> The quarries at Pučišća are a revelation.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Vis — The Untouched Gem · 2.5h ferry</div>
+          <div class="item-desc">Croatia's most remote inhabited island — a former military island closed to tourism until 1989. The Blue Cave, Stiniva beach and some of Croatia's finest food and wine.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Šolta — The Secret Escape · 1h ferry</div>
+          <div class="item-desc">Just one hour from Split and barely touched by mass tourism. Ancient olive groves, local honey, beautiful hidden coves and stone villages unchanged for centuries. The perfect antidote to crowds.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Mljet — Pine Forests &amp; Salt Lakes · ~3h ferry</div>
+          <div class="item-desc">Croatia's most forested island and home to one of its oldest national parks. Two interconnected salt lakes, a 12th-century Benedictine monastery on a tiny island in the lake itself, and pine-shaded paths perfect for cycling and walking.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Korčula — Marco Polo's Birthplace · 2.5h ferry</div>
+          <div class="item-desc">A walled medieval town often called <em class="italic">"Little Dubrovnik,"</em> surrounded by vineyards and olive groves. Korčula claims to be the birthplace of Marco Polo, and you can visit the house where he was supposedly born.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Pelješac Peninsula — Croatian Wine Country · 1.5h drive</div>
+          <div class="item-desc">Not technically an island but a long, narrow peninsula — Croatia's premier wine region, producing the country's finest reds (<span class="gold-em">Plavac Mali, Dingač, Postup</span>). Tiny family wineries, hidden coves, and the famous oysters of Mali Ston.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Pelješac Bridge — Croatia Without the Border</div>
+          <div class="item-desc">Opened in 2022, this stunning 2.4 km cable-stayed bridge finally connects southern Dalmatia to the rest of Croatia by road — meaning the drive to <span class="gold-em">Dubrovnik no longer requires crossing into Bosnia &amp; Herzegovina at Neum</span>. Faster, simpler, and the views from the bridge itself are remarkable.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Lastovo — The Hidden Island · ~5h ferry</div>
+          <div class="item-desc">Croatia's most remote and least-visited inhabited island — a designated <span class="gold-em">dark-sky preserve</span>, one of the best places in Europe to see the Milky Way. Quiet stone villages, untouched coves, time slows here in a way it does almost nowhere else.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Krk — Northern Croatia · ~4h drive</div>
+          <div class="item-desc">Croatia's largest island, connected to the mainland by bridge and home to its busiest airport. A long Roman and medieval history, beautiful beaches, stunning karst landscapes — a worthwhile stop if you're touring further north toward Istria.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="body-text text-center italic" style="max-width: 620px; margin: 2.4rem auto 0; color: var(--gold-dim);">
+      We can arrange private boat tours and ferry tickets for any of these — just ask.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ ADVENTURES ═══════════════ -->
+<section class="section" id="adventures" data-spy style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">By Land</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Adventures Around Split</h2>
+      <p class="section-sub">Extraordinary destinations within easy reach</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="item-list" style="max-width: 920px; margin: 0 auto;">
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Krka National Park · 1h from Split</div>
+          <div class="item-desc">Spectacular waterfalls cascading over travertine terraces through a dramatic canyon. The famous Skradinski Buk is one of Croatia's greatest natural wonders. Boat tours through the park; swimming permitted at select spots.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Plitvice Lakes National Park · 3h from Split</div>
+          <div class="item-desc">A UNESCO World Heritage marvel — 16 terraced lakes connected by hundreds of waterfalls, colours ranging from turquoise to emerald. Croatia's most visited attraction. Go early and the park feels like paradise.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Omiš &amp; the Cetina Canyon · 30 min from Split</div>
+          <div class="item-desc">A legendary pirate town at the dramatic mouth of the Cetina River gorge. Whitewater rafting, zip-lining across the canyon, kayaking and two medieval cliff fortresses towering above. A perfect half-day adrenaline adventure.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Dubrovnik — The Pearl of the Adriatic · 3h drive or catamaran</div>
+          <div class="item-desc">The world's most beautiful walled city. Walk the 2km city walls, explore ancient stone streets, visit Game of Thrones' King's Landing. With the new Pelješac Bridge, the drive is faster and skips the Bosnian border.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Mostar, Bosnia &amp; Herzegovina · 2.5h drive</div>
+          <div class="item-desc">Cross into another world entirely. The iconic Ottoman bridge Stari Most, copper bazaars, mosques and the scent of freshly brewed Bosnian coffee. The most rewarding cultural contrast in the region.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">✦</div>
+        <div>
+          <div class="item-title">Trogir &amp; Klis · 30 min from Split</div>
+          <div class="item-desc">Trogir is a UNESCO-protected island town packed with Romanesque and Renaissance architecture; Klis is the cliffside fortress made famous by Game of Thrones. An easy combined day trip.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="body-text text-center italic" style="max-width: 620px; margin: 2.4rem auto 0; color: var(--gold-dim);">
+      Our trusted private driver covers all of these — comfortable, reliable, on time. Just ask.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ LOCAL TIPS ═══════════════ -->
+<section class="section" id="local-tips" data-spy>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <span class="eyebrow">Practical</span>
+      <h2 class="section-heading" style="margin-top: 0.6rem;">Local Know-How</h2>
+      <p class="section-sub">Everything you need to feel like a local</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Currency</div>
+        <div class="card-body">Croatia uses the <span class="gold-em">Euro (€)</span> since January 2023. ATMs widely available; cards accepted almost everywhere.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Language</div>
+        <div class="card-body"><span class="gold-em">Croatian</span> is spoken. English is widely understood in tourist areas. A <em class="italic">"Hvala!"</em> (thank you) goes a long way.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Tipping</div>
+        <div class="card-body">Not mandatory, but <span class="gold-em">10%</span> is warmly appreciated for good service. Tip in cash when possible — it goes directly to the waiter.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Dress Code</div>
+        <div class="card-body">When entering churches or the Cathedral, please <span class="gold-em">cover shoulders and knees</span>. A light scarf in your bag works perfectly.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Siesta Time</div>
+        <div class="card-body">Some local shops close between <span class="gold-em">13:00–17:00</span> in summer. Supermarkets and tourist spots stay open all day.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Summer Heat</div>
+        <div class="card-body">July and August average <span class="gold-em">30–35°C</span>. Stay hydrated, wear sunscreen, plan outdoor sightseeing for mornings or evenings.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Safety</div>
+        <div class="card-body">Split is a <span class="gold-em">very safe city</span>, day and night. The Old Town is well-lit, well-patrolled and watched over by cameras at most corners. Walking home late is normal and untroubled.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Respect the City</div>
+        <div class="card-body">Split is a real, lived-in city — not a party resort. <span class="gold-em">Public misbehaviour and excessive drunkenness</span> on the streets can result in fines. Enjoy yourself, but treat the city the way locals do.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Smoking</div>
+        <div class="card-body">Smoking is <span class="gold-em">forbidden indoors</span> in restaurants, cafés and bars. Most places have outdoor terraces where smoking is welcome.</div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span style="color: var(--gold);">✦</span> Ultra Europe Festival</div>
+        <div class="card-body">Each <span class="gold-em">mid-July</span>, Split hosts one of Europe's biggest electronic music festivals — drawing 100,000+ fans and world-class DJs. The city is full and electric. Book early if you're coming.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CTA ─────────── -->
+<section class="section text-center">
+  <div class="container">
+    <div class="ornament">✦</div>
+    <p class="italic" style="font-size: clamp(1.05rem, 2vw, 1.4rem); color: var(--text-dim); max-width: 620px; margin: 1rem auto 1.6rem; line-height: 1.55;">
+      Need a recommendation, a reservation or a real local taking your call? We're a phone call away.
+    </p>
+    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:+385989760245" class="btn">+385 98 976 0245</a>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Oblivion</div>
+      <div class="footer-tagline">Luxury rooms inside Diocletian's Palace, Split.</div>
+    </div>
+    <div>
+      <div class="footer-h">Visit</div>
+      <ul>
+        <li><a href="rooms.html">The Rooms</a></li>
+        <li><a href="split.html">Discover Split</a></li>
+        <li><a href="getting-here.html">Getting Here</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-h">Reach Us</div>
+      <ul>
+        <li><a href="mailto:rooms@oblivionstates.com">rooms@oblivionstates.com</a></li>
+        <li><a href="tel:+385989760245">+385 98 976 0245</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="yr">2026</span> Oblivion Luxury Rooms · Split, Croatia</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<!-- ─── Leaflet (nightlife map) ─── -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  const el = document.getElementById('nightlife-map');
+  if (!el || typeof L === 'undefined') return;
+
+  // ── Locations ──
+  const PLACES = {
+    oblivion:  { lat: 43.5090523663292, lng: 16.441553893185013,
+                 name: 'Oblivion Luxury Rooms',
+                 desc: 'Kralja Tomislava 12 · Top floor',
+                 type: 'home',
+                 link: 'https://maps.app.goo.gl/TJTw8GWzr52REAxa7' },
+    club305:   { lat: 43.5095658, lng: 16.437405,
+                 name: '305',
+                 desc: 'Small club just off Marmontova<br>City centre · Late nights, intimate',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/rwNKDxCtTsocKQvNA' },
+    boiler:    { lat: 43.51065, lng: 16.4376543,
+                 name: 'Boiler',
+                 desc: 'Classier, pricier downtown club<br>Polished crowd · Premium drinks',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/VPRrmXNuhGpDLPjj9' },
+    central:   { lat: 43.5108885, lng: 16.4387718,
+                 name: 'Central',
+                 desc: "One of Split's biggest clubs<br>Downtown · Close to Boiler &amp; 305",
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/Jtro9uRWdZdzisCz6' },
+    vanilla:   { lat: 43.5218012, lng: 16.4319705,
+                 name: 'Vanilla',
+                 desc: 'Famous club near Poljud Stadium<br>Indoor + open-air · Big summer nights',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/aNHxabDXHRXJ4UPo7' },
+    tennis:    { lat: 43.5008389, lng: 16.4549882,
+                 name: 'Tennis Bar',
+                 desc: 'Relaxed pre-party spot<br>Day &amp; evening · Local crowd',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/Ba4TJht2vMtiWDf16' },
+    antique:   { lat: 43.5083923, lng: 16.4371257,
+                 name: 'Antique',
+                 desc: 'On the Riva promenade<br>Day &amp; evening · Lunch, drinks, late hours',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/jKagfNYPD7S49ZGu5' },
+    tabu:      { lat: 43.5006061, lng: 16.4731511,
+                 name: 'Tabu',
+                 desc: 'Beach bar at Žnjan beach<br>Day &amp; evening · Loungers + sunset drinks',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/PT259dnK2WG9TbUw5' },
+    gal:       { lat: 43.5024261, lng: 16.4807005,
+                 name: 'GAL',
+                 desc: 'Food &amp; drinks on Žnjan beachfront<br>Newly renovated · Modern, full menu',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/E63Wm4taqAd8fG999' },
+    fabrique:  { lat: 43.5087633, lng: 16.435675,
+                 name: 'Fabrique',
+                 desc: 'Industrial-style space<br>Music, food &amp; drinks · Day &amp; evening',
+                 type: 'club',
+                 link: 'https://maps.app.goo.gl/zsHQsHCexrtYAgce8' }
+  };
+
+  // ── Init map ──
+  const map = L.map(el, { scrollWheelZoom: false }).setView([PLACES.oblivion.lat, PLACES.oblivion.lng], 14);
+  map.attributionControl.setPrefix(false);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  const oblivionIcon = L.divIcon({
+    className: '', html: '<div class="pm-oblivion"></div>',
+    iconSize: [22, 22], iconAnchor: [11, 11]
+  });
+  const clubIcon = L.divIcon({
+    className: '', html: '<div class="pm-parking">♪</div>',
+    iconSize: [30, 30], iconAnchor: [15, 15]
+  });
+
+  const markers = [];
+  Object.values(PLACES).forEach(p => {
+    const m = L.marker([p.lat, p.lng], { icon: p.type === 'home' ? oblivionIcon : clubIcon }).addTo(map);
+    m.bindPopup(`<strong>${p.name}</strong>${p.desc}<br><a href="${p.link}" target="_blank" rel="noopener">View on Google Maps →</a>`);
+    markers.push([p.lat, p.lng]);
+  });
+
+  map.fitBounds(markers, { padding: [40, 40], maxZoom: 15 });
+
+  map.on('click', () => map.scrollWheelZoom.enable());
+  el.addEventListener('mouseleave', () => map.scrollWheelZoom.disable());
+})();
+</script>
+</body>
+</html>
