@@ -843,45 +843,61 @@ a:hover { color: var(--gold-bright); }
 
 @media (max-width: 720px) {
   .nav-toggle { display: block; }
+  /* Full-screen menu with card-style items — each item is its own bordered box
+     with generous margin between, eliminating misclicks. */
   .nav-links {
     position: fixed;
     top: 76px; left: 0; right: 0;
+    bottom: 0;                         /* full viewport below the top nav */
     flex-direction: column;
+    justify-content: flex-start;
     gap: 0;
     background: rgba(13, 9, 5, 0.985);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--gold-faint);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
-    padding: 0.4rem 0;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 1.2rem 0 2rem;
     z-index: 99;
-    transform: translateY(-120%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateY(-100%);
     visibility: hidden;
     pointer-events: none;
-    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+    transition: transform 0.32s ease, visibility 0s linear 0.32s;
   }
   .nav-links.open {
     transform: translateY(0);
     visibility: visible;
     pointer-events: auto;
-    transition: transform 0.3s ease, visibility 0s linear 0s;
+    transition: transform 0.32s ease, visibility 0s linear 0s;
+  }
+  .nav-links li {
+    width: 100%;
+    margin: 0.45rem 0;
   }
   .nav-links a {
-    padding: 1.5rem 1.5rem;
-    border-bottom: 1px solid rgba(214, 180, 120, 0.14);
-    font-size: 1.2rem;
-    letter-spacing: 0.18em;
+    display: block;                    /* CRITICAL — full padded area is clickable */
+    padding: 1.6rem 1.6rem;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
     text-align: center;
-    transition: background 0.18s, color 0.18s;
+    border: 1px solid var(--gold-faint);
+    border-radius: 8px;
+    background: var(--gold-bg);
+    color: var(--text-dim);
+    touch-action: manipulation;        /* removes the 300ms tap delay on iOS */
+    transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.1s;
   }
-  .nav-links a:last-child { border-bottom: none; }
   .nav-links a:active {
-    background: rgba(214, 180, 120, 0.16);
+    background: rgba(214, 180, 120, 0.22);
+    border-color: var(--gold);
     color: var(--gold-bright);
+    transform: scale(0.98);
   }
   .nav-links a.active {
     color: var(--gold);
-    background: rgba(214, 180, 120, 0.08);
+    background: rgba(214, 180, 120, 0.12);
+    border-color: var(--gold-dim);
   }
   .nav-links a.active::before {
     content: '✦';
@@ -890,21 +906,11 @@ a:hover { color: var(--gold-bright); }
   }
   .nav-links a.active::after { display: none; }
 
-  /* Backdrop behind drawer — tap outside to close */
-  .nav-backdrop {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 98;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s, visibility 0s linear 0.25s;
-  }
-  .nav-backdrop.open {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.25s, visibility 0s linear 0s;
-  }
+  /* Lock body scroll when menu open */
+  body.menu-open { overflow: hidden; }
+
+  /* Backdrop disabled (full-screen menu covers everything) */
+  .nav-backdrop { display: none; }
 
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }

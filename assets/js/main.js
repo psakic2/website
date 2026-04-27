@@ -12,6 +12,7 @@
     const setOpen = (open) => {
       links.classList.toggle('open', open);
       backdrop.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
       toggle.textContent = open ? '✕' : '☰';
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     };
