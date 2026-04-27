@@ -111,9 +111,7 @@ a:hover { color: var(--gold-bright); }
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 1rem 0;
-  background: rgba(13, 9, 5, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 9, 5, 0.95);   /* solid-ish — no backdrop-filter so position:fixed children work */
   border-bottom: 1px solid var(--gold-faint);
   transition: background 0.3s ease;
 }

@@ -30,8 +30,8 @@
   const nav = document.querySelector('.nav');
   if (nav) {
     const onScroll = () => {
-      if (window.scrollY > 40) nav.style.background = 'rgba(13, 9, 5, 0.95)';
-      else nav.style.background = 'rgba(13, 9, 5, 0.85)';
+      if (window.scrollY > 40) nav.style.background = 'rgba(13, 9, 5, 0.98)';
+      else nav.style.background = 'rgba(13, 9, 5, 0.95)';
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
