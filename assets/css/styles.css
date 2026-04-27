@@ -173,10 +173,16 @@ a:hover { color: var(--gold-bright); }
   background: none;
   border: none;
   color: var(--gold);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  min-width: 48px;
+  min-height: 48px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
+.nav-toggle:active { background: rgba(214, 180, 120, 0.15); }
 
 /* ─── Hero ─── */
 .hero {
@@ -842,12 +848,15 @@ a:hover { color: var(--gold-bright); }
     top: 76px; left: 0; right: 0;
     flex-direction: column;
     gap: 0;
-    background: rgba(13, 9, 5, 0.97);
-    backdrop-filter: blur(12px);
+    background: rgba(13, 9, 5, 0.985);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--gold-faint);
-    padding: 1rem 0;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+    padding: 0.4rem 0;
+    z-index: 99;
     transform: translateY(-120%);
-    visibility: hidden;            /* belt + braces — keep drawer hidden even if transform glitches */
+    visibility: hidden;
     pointer-events: none;
     transition: transform 0.3s ease, visibility 0s linear 0.3s;
   }
@@ -858,12 +867,44 @@ a:hover { color: var(--gold-bright); }
     transition: transform 0.3s ease, visibility 0s linear 0s;
   }
   .nav-links a {
-    padding: 1.3rem 1.5rem;
-    border-bottom: 1px solid rgba(214, 180, 120, 0.12);
-    font-size: 1.05rem;
+    padding: 1.5rem 1.5rem;
+    border-bottom: 1px solid rgba(214, 180, 120, 0.14);
+    font-size: 1.2rem;
     letter-spacing: 0.18em;
+    text-align: center;
+    transition: background 0.18s, color 0.18s;
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a:active {
+    background: rgba(214, 180, 120, 0.16);
+    color: var(--gold-bright);
+  }
+  .nav-links a.active {
+    color: var(--gold);
+    background: rgba(214, 180, 120, 0.08);
+  }
+  .nav-links a.active::before {
+    content: '✦';
+    margin-right: 0.6em;
+    color: var(--gold);
   }
   .nav-links a.active::after { display: none; }
+
+  /* Backdrop behind drawer — tap outside to close */
+  .nav-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 98;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0s linear 0.25s;
+  }
+  .nav-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.25s, visibility 0s linear 0s;
+  }
 
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }

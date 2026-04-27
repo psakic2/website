@@ -1,16 +1,28 @@
 // Oblivion Rooms — Shared site JS
 (function () {
-  // Mobile nav toggle
+  // Mobile nav toggle (with X icon, backdrop, tap-outside-to-close)
   const toggle = document.querySelector('.nav-toggle');
   const links  = document.querySelector('.nav-links');
   if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-    // Close on link click
+    // Inject backdrop element once
+    const backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    const setOpen = (open) => {
+      links.classList.toggle('open', open);
+      backdrop.classList.toggle('open', open);
+      toggle.textContent = open ? '✕' : '☰';
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
+    backdrop.addEventListener('click', () => setOpen(false));
     links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => links.classList.remove('open'));
+      a.addEventListener('click', () => setOpen(false));
     });
+    // Close on Escape (handy on iPad with keyboard)
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
   }
 
   // Subtle nav background change on scroll
