@@ -409,6 +409,74 @@ a:hover { color: var(--gold-bright); }
   .hero * { animation: none !important; }
 }
 
+/* ─── Entrance walkthrough (Finding Us section) ─── */
+.entrance-step {
+  margin: 3rem auto 0;
+  max-width: 640px;
+  text-align: center;
+}
+.entrance-step:first-of-type { margin-top: 0; }
+.entrance-step-num {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+}
+.entrance-step-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.2rem;
+}
+.entrance-photo {
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--gold-faint);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-soft);
+  max-width: 100%;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+.entrance-photo img { display: block; width: 100%; max-width: 540px; }
+.entrance-callout {
+  position: absolute;
+  border: 3px solid var(--gold);
+  border-radius: 4px;
+  box-shadow: 0 0 0 9999px rgba(0,0,0,0.55);
+  pointer-events: none;
+}
+.entrance-callout-label {
+  position: absolute;
+  bottom: -0.4rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: var(--gold);
+  color: var(--bg);
+  padding: 0.32rem 0.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.entrance-caption {
+  margin-top: 1.2rem;
+  color: var(--text-dim);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.entrance-caption .gold-em { font-weight: 500; }
+
 /* ─── Subtle reveal-on-scroll ─── */
 .reveal {
   opacity: 0;
