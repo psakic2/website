@@ -1,0 +1,14 @@
+# Files Cloudflare should NOT upload as static assets.
+# Same syntax as .gitignore.
+
+.git
+.git/**
+.gitattributes
+.gitignore
+.DS_Store
+.assetsignore
+
+# Editor / OS clutter
+Thumbs.db
+*.log
+node_modules
