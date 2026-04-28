@@ -320,6 +320,15 @@ a:hover { color: var(--gold-bright); }
   inset: 0;
   background: linear-gradient(180deg, rgba(13, 9, 5, 0.1) 0%, rgba(13, 9, 5, 0.5) 50%, rgba(13, 9, 5, 0.95) 100%);
 }
+/* Optional spotlight callout INSIDE a tile-bg */
+.tile-bg .tile-callout {
+  position: absolute;
+  border: 2px solid var(--gold);
+  border-radius: 3px;
+  box-shadow: 0 0 18px rgba(214, 180, 120, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
 .tile-content {
   position: relative;
   z-index: 1;
