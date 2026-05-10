@@ -31,6 +31,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   overflow-x: clip;     /* clip = no horizontal scroll, keeps position:sticky working on iOS Safari */
+  position: relative;
+  isolation: isolate;   /* gives body its own stacking context so the bg pseudo-elements layer correctly */
+}
+
+/* Site-wide palace atmosphere — fixed background that stays in place as you scroll.
+   Very low opacity + heavy dark gradient = warm depth, not a competing photo. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/split/diocletians-palace.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.13;
+  filter: contrast(1.05) saturate(0.85);
+  z-index: -2;
+  pointer-events: none;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 9, 5, 0.5) 0%, rgba(13, 9, 5, 0.65) 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 img { max-width: 100%; display: block; height: auto; }
