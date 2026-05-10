@@ -40,6 +40,7 @@
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">Book</a></li>
       <li><a href="rooms.html">The Rooms</a></li>
       <li><a href="getting-here.html">Getting Here</a></li>
       <li><a href="split.html">Discover Split</a></li>
@@ -88,51 +89,10 @@
       </div>
 
       <div style="margin-top: 1.2rem;">
-        <a href="#availability" style="font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.28em; text-transform: uppercase;">
-          Check live availability ↓
+        <a href="book.html" style="font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.28em; text-transform: uppercase;">
+          Check live availability →
         </a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── AVAILABILITY ─────────── -->
-<section id="availability" class="section">
-  <div class="container">
-    <div class="text-center" style="margin-bottom: 2.4rem;">
-      <span class="eyebrow">Live Availability</span>
-      <h2 class="section-heading" style="margin-top: 0.6rem;">Pick Your Dates</h2>
-      <div class="divider"></div>
-      <p class="body-text" style="margin-top: 1.1rem; max-width: 720px; margin-left: auto; margin-right: auto;">
-        Booked dates sync automatically from Booking.com. Click an available date to start, then your check-out — we'll prefill a WhatsApp request with your dates.
-      </p>
-      <div class="cal-legend">
-        <span class="cal-legend-item"><span class="cal-legend-swatch is-available"></span>Available</span>
-        <span class="cal-legend-item"><span class="cal-legend-swatch is-booked"></span>Booked</span>
-        <span class="cal-legend-item"><span class="cal-legend-swatch is-selected"></span>Your dates</span>
-      </div>
-    </div>
-
-    <div class="availability-grid">
-      <div class="cal-wrap" data-room="red">
-        <div class="cal-room-name">Room I — The Roman Red</div>
-        <div class="cal-body"></div>
-        <div class="cal-summary-slot"></div>
-      </div>
-      <div class="cal-wrap" data-room="blue">
-        <div class="cal-room-name">Room II — The Paris Blue</div>
-        <div class="cal-body"></div>
-        <div class="cal-summary-slot"></div>
-      </div>
-    </div>
-
-    <div class="cal-status">Loading live availability…</div>
-
-    <div class="text-center" style="margin: 2.6rem auto 0; max-width: 720px; padding: 1.6rem 1.4rem; border: 1px solid var(--gold-faint); border-radius: 8px; background: var(--gold-bg);">
-      <span class="eyebrow" style="font-size: 0.78rem;">How Direct Booking Works</span>
-      <p class="body-text" style="margin-top: 0.9rem; font-size: 0.98rem;">
-        For the fastest reply, <span class="gold-em">message us on WhatsApp or email</span> — we usually answer within ~30 minutes during the day to confirm availability and exact rate. To complete a direct booking, a <span class="gold-em">prepayment via Revolut or direct bank transfer (IBAN)</span> is required — no third-party processors. Cheaper than the booking sites, same room, same warm welcome.
-      </p>
     </div>
   </div>
 </section>
@@ -246,7 +206,6 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
-<script src="assets/js/availability.js"></script>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
