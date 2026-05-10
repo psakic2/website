@@ -905,11 +905,266 @@ a:hover { color: var(--gold-bright); }
 }
 
 /* ═══════════════════════════════════════════════════════════
+   AVAILABILITY CALENDARS
+   ═══════════════════════════════════════════════════════════ */
+
+.availability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.cal-wrap {
+  border: 1px solid var(--gold-faint);
+  border-radius: 8px;
+  background: var(--gold-bg);
+  padding: 1.6rem 1.4rem 1.4rem;
+}
+
+.cal-room-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.cal-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--text);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.cal-nav {
+  background: transparent;
+  border: 1px solid var(--gold-faint);
+  color: var(--gold);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+}
+.cal-nav:hover {
+  background: var(--gold-bg);
+  border-color: var(--gold-dim);
+  color: var(--gold-bright);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.cal-dow {
+  margin-bottom: 4px;
+}
+.cal-dow-cell {
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  padding: 4px 0;
+}
+
+.cal-cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  user-select: none;
+  position: relative;
+}
+.cal-blank { background: transparent; }
+
+.cal-cell.is-past {
+  color: rgba(250, 243, 220, 0.18);
+}
+.cal-cell.is-booked {
+  color: rgba(250, 243, 220, 0.28);
+  background: rgba(250, 243, 220, 0.04);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+.cal-cell.is-available {
+  cursor: pointer;
+  transition: all 0.15s;
+  border-color: rgba(214, 180, 120, 0.18);
+}
+.cal-cell.is-available:hover,
+.cal-cell.is-available:focus-visible {
+  background: rgba(214, 180, 120, 0.14);
+  border-color: var(--gold-dim);
+  color: var(--gold-bright);
+  outline: none;
+}
+.cal-cell.is-checkin,
+.cal-cell.is-checkout {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  font-weight: 600;
+}
+.cal-cell.is-in-range {
+  background: rgba(214, 180, 120, 0.18);
+  color: var(--gold-bright);
+  border-color: rgba(214, 180, 120, 0.3);
+}
+
+.cal-day {
+  display: block;
+  line-height: 1;
+}
+
+/* Selection summary + actions */
+.cal-summary-slot {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gold-faint);
+  min-height: 96px;
+}
+.cal-summary {
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--text-dim);
+}
+.cal-summary-empty {
+  color: var(--gold-dim);
+  font-size: 0.92rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+.cal-summary-line {
+  font-size: 1.05rem;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+.cal-summary-line strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+.cal-arrow {
+  color: var(--gold-dim);
+  margin: 0 0.4em;
+}
+.cal-nights {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.cal-summary-label {
+  color: var(--gold-dim);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.cal-summary-hint {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.cal-actions {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cal-actions .btn { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+.btn-ghost {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold-dim);
+}
+.btn-ghost:hover { background: var(--gold-bg); }
+.cal-clear {
+  background: transparent;
+  border: none;
+  color: var(--gold-dim);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-faint);
+  text-underline-offset: 3px;
+}
+.cal-clear:hover { color: var(--gold); }
+
+/* Status (live / not-connected / failed) */
+.cal-status {
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-top: 1.5rem;
+}
+.cal-status-warn { color: rgba(250, 200, 150, 0.85); }
+
+/* Legend */
+.cal-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+.cal-legend-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+.cal-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--gold-faint);
+}
+.cal-legend-swatch.is-available { background: transparent; }
+.cal-legend-swatch.is-booked { background: rgba(250, 243, 220, 0.04); }
+.cal-legend-swatch.is-selected { background: var(--gold); border-color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .availability-grid { grid-template-columns: 1fr; gap: 1.4rem; }
 }
 
 @media (max-width: 900px) {
