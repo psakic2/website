@@ -353,7 +353,7 @@
         </div>
 
         <p class="gf-note">
-          ✦ &nbsp; Your details go directly to Petar &nbsp; ✦
+          ✦ &nbsp; Your details go directly to Oblivion Luxury Rooms &nbsp; ✦
         </p>
       </form>
 
@@ -480,7 +480,7 @@
     // Pre-flight: detect un-configured access key so the user gets a clear message
     const keyField = form.querySelector('input[name="access_key"]');
     if (!keyField || !keyField.value || keyField.value.indexOf('YOUR_WEB3FORMS') === 0) {
-      showError('The form is not yet connected to email delivery. Please contact Petar directly at rooms@oblivionstates.com or +385 98 976 0245.');
+      showError('The form is not yet connected to email delivery. Please contact Oblivion Luxury Rooms directly at rooms@oblivionstates.com or +385 98 976 0245.');
       return;
     }
 
@@ -501,12 +501,12 @@
         success.classList.add('is-on');
         window.scrollTo({ top: success.offsetTop - 100, behavior: 'smooth' });
       } else {
-        showError((json && json.message) || 'Something went wrong sending the form. Please try again, or message Petar on WhatsApp at +385 98 976 0245.');
+        showError((json && json.message) || 'Something went wrong sending the form. Please try again, or message us on WhatsApp at +385 98 976 0245.');
         submit.disabled = false;
         submit.textContent = 'Submit Registration';
       }
     } catch (err) {
-      showError('Network error. Please try again, or message Petar on WhatsApp at +385 98 976 0245.');
+      showError('Network error. Please try again, or message us on WhatsApp at +385 98 976 0245.');
       submit.disabled = false;
       submit.textContent = 'Submit Registration';
     }
