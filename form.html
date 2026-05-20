@@ -50,6 +50,19 @@
   }
   .gf-field { display: flex; flex-direction: column; }
   .gf-field.gf-full { grid-column: 1 / -1; }
+  .gf-section-head {
+    grid-column: 1 / -1;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    padding-top: 1.4rem;
+    margin-top: 0.6rem;
+    border-top: 1px solid var(--gold-faint);
+  }
+  [hidden] { display: none !important; }
   .gf-label {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 0.78rem;
@@ -273,15 +286,27 @@
 
         <div class="gf-grid">
 
-          <!-- Names -->
+          <!-- Number of guests -->
+          <div class="gf-field gf-full">
+            <label class="gf-label" for="gfNumGuests">Number of guests <span class="gf-req">✦</span></label>
+            <select class="gf-select" id="gfNumGuests" name="number_of_guests" required>
+              <option value="1" selected>1 guest</option>
+              <option value="2">2 guests</option>
+            </select>
+          </div>
+
+          <!-- ─── Guest 1 ─── -->
+          <div class="gf-section-head">Your Details</div>
+
+          <!-- Your Name(s) -->
           <div class="gf-field">
-            <label class="gf-label" for="gfFirstName">Names <span class="gf-req">✦</span></label>
+            <label class="gf-label" for="gfFirstName">Your Name(s) <span class="gf-req">✦</span></label>
             <input class="gf-input" type="text" id="gfFirstName" name="first_name" required autocomplete="given-name" placeholder="As on passport / ID">
           </div>
 
-          <!-- Surnames -->
+          <!-- Your Surname(s) -->
           <div class="gf-field">
-            <label class="gf-label" for="gfLastName">Surnames <span class="gf-req">✦</span></label>
+            <label class="gf-label" for="gfLastName">Your Surname(s) <span class="gf-req">✦</span></label>
             <input class="gf-input" type="text" id="gfLastName" name="last_name" required autocomplete="family-name" placeholder="As on passport / ID">
           </div>
 
@@ -338,7 +363,75 @@
             <input class="gf-input" type="text" id="gfResCity" name="city_of_residence" required autocomplete="address-level2" placeholder="Where you currently live">
           </div>
 
-          <!-- Check-in date -->
+          <!-- ─── Guest 2 (hidden until 2 guests selected) ─── -->
+          <div class="gf-section-head gf-g2" hidden>Second Guest</div>
+
+          <!-- Name(s) -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfFirstName2">Name(s) <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfFirstName2" name="guest2_first_name" autocomplete="section-guest2 given-name" placeholder="As on passport / ID" disabled>
+          </div>
+
+          <!-- Surname(s) -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfLastName2">Surname(s) <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfLastName2" name="guest2_last_name" autocomplete="section-guest2 family-name" placeholder="As on passport / ID" disabled>
+          </div>
+
+          <!-- Gender -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfGender2">Gender <span class="gf-req">✦</span></label>
+            <select class="gf-select" id="gfGender2" name="guest2_gender" disabled>
+              <option value="" disabled selected>Select…</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other / prefer not to say">Other / prefer not to say</option>
+            </select>
+          </div>
+
+          <!-- Passport / ID -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfDocNumber2">Passport or ID number <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfDocNumber2" name="guest2_document_number" autocomplete="off" placeholder="e.g. 123456789" disabled>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfDob2">Date of birth <span class="gf-req">✦</span></label>
+            <input class="gf-input gf-date" type="text" id="gfDob2" name="guest2_date_of_birth" autocomplete="section-guest2 bday" placeholder="DD/MM/YYYY" inputmode="numeric" disabled>
+          </div>
+
+          <!-- Citizenship -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfCitizenship2">Citizenship <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfCitizenship2" name="guest2_citizenship" autocomplete="section-guest2 country-name" placeholder="e.g. Croatian, German, USA…" disabled>
+          </div>
+
+          <!-- Country of birth -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfBirthCountry2">Country of birth <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfBirthCountry2" name="guest2_country_of_birth" placeholder="e.g. Croatia" disabled>
+          </div>
+
+          <!-- City of birth -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfBirthCity2">City of birth <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfBirthCity2" name="guest2_city_of_birth" placeholder="e.g. Split" disabled>
+          </div>
+
+          <!-- Country of residence -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfResCountry2">Country of residence <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfResCountry2" name="guest2_country_of_residence" autocomplete="section-guest2 country-name" placeholder="Where they currently live" disabled>
+          </div>
+
+          <!-- City of residence -->
+          <div class="gf-field gf-g2" hidden>
+            <label class="gf-label" for="gfResCity2">City of residence <span class="gf-req">✦</span></label>
+            <input class="gf-input" type="text" id="gfResCity2" name="guest2_city_of_residence" autocomplete="section-guest2 address-level2" placeholder="Where they currently live" disabled>
+          </div>
+
+          <!-- Check-in date (shared by both guests) -->
           <div class="gf-field gf-full">
             <label class="gf-label" for="gfCheckin">Check-in date at Oblivion <span class="gf-req">✦</span></label>
             <input class="gf-input gf-date" type="text" id="gfCheckin" name="check_in_date" required placeholder="DD/MM/YYYY" inputmode="numeric">
@@ -421,6 +514,29 @@
     minDate: 'today',
     disableMobile: false
   });
+  // Second guest's date of birth
+  flatpickr('#gfDob2', {
+    dateFormat: 'd/m/Y',
+    allowInput: true,
+    maxDate: 'today',
+    disableMobile: false
+  });
+
+  // ─── Toggle second-guest fields based on number of guests ───
+  const numGuestsSelect = document.getElementById('gfNumGuests');
+  const guest2Els     = document.querySelectorAll('.gf-g2');
+  const guest2Inputs  = document.querySelectorAll('.gf-g2 input, .gf-g2 select');
+
+  function toggleGuest2() {
+    const isTwo = numGuestsSelect.value === '2';
+    guest2Els.forEach(el => { el.hidden = !isTwo; });
+    guest2Inputs.forEach(input => {
+      input.required = isTwo;
+      input.disabled = !isTwo; // disabled inputs are excluded from FormData
+    });
+  }
+  numGuestsSelect.addEventListener('change', toggleGuest2);
+  toggleGuest2();
 
   // ─── Pre-fill check-in date from URL parameter ───
   // Accepts ?stay=YYYY-MM-DD (ISO) or ?stay=DD/MM/YYYY
@@ -470,11 +586,17 @@
       return;
     }
 
-    // Build dynamic email subject: OBLIVION: First Last_YYYY-MM-DD
+    // Build dynamic email subject: OBLIVION: First Last [+ Second guest]_DD/MM/YYYY
     const first   = document.getElementById('gfFirstName').value.trim();
     const last    = document.getElementById('gfLastName').value.trim();
     const checkin = document.getElementById('gfCheckin').value;
-    const guestName = (first + ' ' + last).trim() || 'Guest';
+    let guestName = (first + ' ' + last).trim() || 'Guest';
+    if (numGuestsSelect.value === '2') {
+      const first2 = document.getElementById('gfFirstName2').value.trim();
+      const last2  = document.getElementById('gfLastName2').value.trim();
+      const second = (first2 + ' ' + last2).trim();
+      if (second) guestName += ' + ' + second;
+    }
     subjectInput.value = 'OBLIVION: ' + guestName + '_' + (checkin || 'TBD');
 
     // Pre-flight: detect un-configured access key so the user gets a clear message
