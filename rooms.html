@@ -350,12 +350,15 @@
   const oblivion = [43.5090523663292, 16.441553893185013];
   const lvxor    = [43.50847, 16.44058];   // Restaurant Lvxor on Peristyle Square (approximate)
 
-  const map = L.map(el, { scrollWheelZoom: false });
+  const narrow = el.clientWidth < 520;
+  const map = L.map(el, { scrollWheelZoom: false,
+                          zoomControl: false });
+  L.control.zoom({ position: narrow ? 'bottomleft' : 'topleft' }).addTo(map);
   map.attributionControl.setPrefix(false);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    detectRetina: true,
     maxZoom: 19
   }).addTo(map);
 
@@ -373,7 +376,9 @@
   L.marker(lvxor, { icon: lvxorIcon }).addTo(map)
     .bindPopup('<strong>Restaurant Lvxor</strong>Peristyle Square<br><a href="https://lvxor.hr/en/home/" target="_blank" rel="noopener">lvxor.hr →</a>');
 
-  map.fitBounds([oblivion, lvxor], { padding: [50, 50], maxZoom: 18 });
+  const pad = el.clientWidth < 520 ? 22 : 50;
+  map.fitBounds([oblivion, lvxor], { paddingTopLeft: narrow ? [pad, pad] : [pad + 46, pad + 56],
+                                     paddingBottomRight: narrow ? [pad, pad + 46] : [pad, pad], maxZoom: 18 });
 
   map.on('click', () => map.scrollWheelZoom.enable());
   el.addEventListener('mouseleave', () => map.scrollWheelZoom.disable());

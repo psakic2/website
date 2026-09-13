@@ -505,12 +505,15 @@
   };
 
   // ── Init map ──
-  const map = L.map(el, { scrollWheelZoom: false }).setView([PLACES.oblivion.lat, PLACES.oblivion.lng], 15);
+  const narrow = el.clientWidth < 520;
+  const map = L.map(el, { scrollWheelZoom: false, zoomControl: false })
+                .setView([PLACES.oblivion.lat, PLACES.oblivion.lng], 15);
+  L.control.zoom({ position: narrow ? 'bottomleft' : 'topleft' }).addTo(map);
   map.attributionControl.setPrefix(false);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    detectRetina: true,
     maxZoom: 19
   }).addTo(map);
 
@@ -532,7 +535,9 @@
   });
 
   // Fit all markers in view
-  map.fitBounds(markers, { padding: [40, 40], maxZoom: 16 });
+  const pad = el.clientWidth < 520 ? 16 : 40;
+  map.fitBounds(markers, { paddingTopLeft: narrow ? [pad, pad] : [pad + 46, pad + 56],
+                           paddingBottomRight: narrow ? [pad, pad + 46] : [pad, pad], maxZoom: 16 });
 
   // Click map to enable scroll-zoom (UX nicety)
   map.on('click', () => map.scrollWheelZoom.enable());
@@ -546,12 +551,15 @@
 
   const oblivion = [43.5090523663292, 16.441553893185013];
 
-  const map = L.map(el, { scrollWheelZoom: false }).setView(oblivion, 17);
+  const narrow = el.clientWidth < 520;
+  const map = L.map(el, { scrollWheelZoom: false, zoomControl: false })
+                .setView(oblivion, 17);
+  L.control.zoom({ position: narrow ? 'bottomleft' : 'topleft' }).addTo(map);
   map.attributionControl.setPrefix(false);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    detectRetina: true,
     maxZoom: 19
   }).addTo(map);
 

@@ -974,12 +974,15 @@
   };
 
   // ── Init map ──
-  const map = L.map(el, { scrollWheelZoom: false }).setView([PLACES.oblivion.lat, PLACES.oblivion.lng], 14);
+  const narrow = el.clientWidth < 520;
+  const map = L.map(el, { scrollWheelZoom: false, zoomControl: false })
+                .setView([PLACES.oblivion.lat, PLACES.oblivion.lng], 14);
+  L.control.zoom({ position: narrow ? 'bottomleft' : 'topleft' }).addTo(map);
   map.attributionControl.setPrefix(false);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    detectRetina: true,
     maxZoom: 19
   }).addTo(map);
 
@@ -999,7 +1002,12 @@
     markers.push([p.lat, p.lng]);
   });
 
-  map.fitBounds(markers, { padding: [40, 40], maxZoom: 15 });
+  // The venues spread wide and flat, so a fixed 40px pad leaves a phone-sized
+  // map mostly open sea. Scale the padding to the map instead.
+  const pad = el.clientWidth < 520 ? 16 : 40;
+  // Reserve the top-left corner so no marker ends up underneath the zoom control.
+  map.fitBounds(markers, { paddingTopLeft: narrow ? [pad, pad] : [pad + 46, pad + 56],
+                           paddingBottomRight: narrow ? [pad, pad + 46] : [pad, pad], maxZoom: 15 });
 
   map.on('click', () => map.scrollWheelZoom.enable());
   el.addEventListener('mouseleave', () => map.scrollWheelZoom.disable());
