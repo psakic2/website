@@ -1197,7 +1197,10 @@ a:hover { color: var(--gold-bright); }
   .gallery { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 720px) {
+/* Nav: the horizontal bar needs ~1000px for six labels plus the brand, so the
+   drawer takes over below that. Previously this cut in at 720px, which left
+   the bar overflowing its container between 721px and 833px (iPad portrait). */
+@media (max-width: 1023px) {
   .nav-toggle { display: block; }
   /* Full-screen menu with card-style items — each item is its own bordered box
      with generous margin between, eliminating misclicks. */
@@ -1268,6 +1271,16 @@ a:hover { color: var(--gold-bright); }
   /* Backdrop disabled (full-screen menu covers everything) */
   .nav-backdrop { display: none; }
 
+}
+
+/* Between 1024px and 1240px the bar fits, but only just — tighten the tracking
+   a touch so the labels never collide with the brand. */
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .nav-links { gap: 1.5rem; }
+  .nav-links a { letter-spacing: 0.14em; font-size: 0.88rem; }
+}
+
+@media (max-width: 720px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
   .hero { min-height: 90vh; padding: 6rem 1.5rem 3rem; }

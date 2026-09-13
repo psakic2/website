@@ -82,6 +82,12 @@
   if ('IntersectionObserver' in window) {
     const revealTargets = document.querySelectorAll('.section, .section-tight, .room-block, .tile, .dish-card');
     revealTargets.forEach(el => el.classList.add('reveal'));
+
+    // No ratio threshold: fire on any overlap with the viewport.
+    // A ratio threshold can never be met by a section far taller than the
+    // screen — the most it can ever cover is viewportHeight / sectionHeight.
+    // #food on split.html is ~10,700px on a phone, so its ratio tops out
+    // around 0.06–0.08 and the old 0.08 threshold left it stuck at opacity 0.
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -89,8 +95,25 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }, { rootMargin: '0px 0px -40px 0px' });
     revealTargets.forEach(el => io.observe(el));
+
+    // Safety net: reveal anything already on screen that the observer has
+    // not reported yet (bfcache restores, deep links straight to an anchor,
+    // sections that grow as lazy images load). Never leaves content hidden.
+    const revealOnScreen = () => {
+      revealTargets.forEach(el => {
+        if (el.classList.contains('visible')) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          el.classList.add('visible');
+          io.unobserve(el);
+        }
+      });
+    };
+    window.addEventListener('load', revealOnScreen);
+    window.addEventListener('pageshow', revealOnScreen);
+    window.addEventListener('scroll', revealOnScreen, { passive: true });
   }
 
   // ─── Lightbox ───
